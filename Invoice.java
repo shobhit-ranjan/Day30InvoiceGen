@@ -16,7 +16,7 @@ public class Invoice {
 		return time;
 	}
 
-	public void setLastName(int time) {
+	public void setTime(int time) {
 		this.time = time;
 	}
 }
