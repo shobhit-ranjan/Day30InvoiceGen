@@ -57,7 +57,7 @@ public class InvoiceGen {
 			System.out.println("your avg fare per ride was " + avrRide);
 
 		} else {
-			System.out.println(" you have to ride with us !!");
+			System.out.println(" you did't ride with us !!");
 		}
 	}
 }
