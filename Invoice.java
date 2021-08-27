@@ -1,5 +1,5 @@
 
-public class Invoice {
+ public class Invoice {
 
 	static int distance;
 	static int time;

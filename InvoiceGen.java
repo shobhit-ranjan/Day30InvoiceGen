@@ -18,37 +18,46 @@ public class InvoiceGen {
 		noOfRides = sc.nextInt();
 
 		for (int i = 0; i < noOfRides; i++) {
-			System.out.println(" Enter the distance ");
+			System.out.println(" Enter the distance for your ride  ");
 			dis = sc.nextInt();
 			System.out.println(" Enter the Time in min ");
 			time = sc.nextInt();
 			mutipleRideforDis.add(dis);
 			mutipleRideforTime.add((time));
 		}
-		mutipleRideforDis.forEach(dis ->{
-		
-	            System.out.println(dis);
-	            totalDistance = totalDistance+dis;
+		mutipleRideforDis.forEach(dis -> {
+
+			System.out.println(dis);
+			totalDistance = totalDistance + dis;
 		});
-		mutipleRideforTime.forEach(time ->{
-			
-            System.out.println(time);
-            totalTime=totalTime+time;
-	});
+		mutipleRideforTime.forEach(time -> {
+
+			System.out.println(time);
+			totalTime = totalTime + time;
+		});
 		System.out.println(totalDistance);
-		System.out.println(totalTime);
-		
+		//System.out.println(totalTime);
 
 	}
 
 	static void billGenerater() {
-		int totalcost = (totalDistance * 10) + totalTime;
+		if ((mutipleRideforDis != null) && (mutipleRideforTime != null)) {
 
-		if (totalcost < 5) {
-			System.out.println("for today you have pay 5$ as a base fare");
+			int totalcost = (totalDistance * 10) + totalTime;
+
+			if (totalcost < 5) {
+				System.out.println("for today you have pay 5$ as a base fare");
+			} else {
+				System.out.println("for today you have pay " + totalcost + " $ as you fare");
+			}
+
+			System.out.println("your total no of ride with us was " + noOfRides);
+			System.out.println("your total cost with  with us was " + totalcost);
+			int avrRide = (totalcost / noOfRides);
+			System.out.println("your avg fare per ride was " + avrRide);
+
 		} else {
-			System.out.println("for today you have pay " + totalcost + " $ as you fare");
+			System.out.println(" you have to ride with us !!");
 		}
-
 	}
 }
