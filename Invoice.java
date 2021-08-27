@@ -1,15 +1,21 @@
 
 public class Invoice {
 
-	private int distance;
-	private int time;
+	static int distance;
+	static int time;
 
-	public int getDistance() {
-		return distance;
+	public Invoice(int dis, int time) {
+		// TODO Auto-generated constructor stub
+		this.distance = dis;
+		this.time = time;
 	}
 
 	public void setDistance(int distance) {
 		this.distance = distance;
+	}
+
+	public int getDistance() {
+		return distance;
 	}
 
 	public int getTime() {
